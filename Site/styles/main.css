@@ -1,14 +1,21 @@
 :root {
-    --title-color: #25db46;
+    --title-color: #0bf8b1;
+    --main-color: #0bb5d3;
+}
+
+*{
+    margin: 0;
+    padding: 0;
 }
 
 html {
-    font-family: 'Roboto', 'san-serif';
+    font-family: Roboto, 'san-serif';
 }
 /*BOX MODEL*/
 
 body {
-    background: #afe7d4;
+    background: rgb(248, 255, 252);
+    -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -16,13 +23,12 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Noto Sans', sans-serif;
-    color: var(title-color);
+    font-family: Noto Sans, sans-serif;
+    color: var(--title-color);
 }
 
 #page-home{
-    height: 100vh;
-    background-image: url(../assets/BackGroundPNG.png);
+    height: 100vh;   
     background-size: contain;
 
 }
@@ -30,9 +36,12 @@ h1, h2, h3, h4, h5, h6 {
 #page-home .content{
     width: 90%;
     max-width: 1100px;
-
     margin: 30px auto 0 40px;
 
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
 }
 
 #page-home header {
@@ -41,28 +50,68 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: space-between;
 }
 
-#page-home header a {
-    display: flex;
-
-    color: var(title-color);
-    font-weight: 700;
-
-}
-
-#page-home header a span {
-    margin-right: 16px;
-    display: flex;
-    color: var(title-color);
-    
-    background-image: url(../assets/"Aqui colocarei a imagem do span");
-
-}
 
 #page-home main{
     max-width: 560px;
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
 
 #page-home main h1{
     font-size: 54px;
-    color: var(title-color);
+
+}
+
+#page-home main p{
+    font-size: 24px;
+    line-height: 38px;
+    margin-top: 24px;
+}
+
+#page-home header a{
+    width: 50%;
+    max-width: 160px;
+    height: 35px;
+    border-radius: 5px 16px;
+
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+
+    font-weight: bold;
+    color: white;
+    background-color: var(--main-color);
+
+    cursor: pointer;
+
+    transition: 400ms;
+}
+
+#page-home header a:hover {
+    background-color: #00a0bd;
+}
+
+#page-home header a span {
+    width: 150px;
+    margin-left: 14px;
+    
+    border-top-left-radius: 5px 16px ;
+}
+
+#page-home header a span::after {
+    content:"";
+}
+
+.logoSoniaVet {
+    max-width: 120px;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+    margin-top: 25px;
+
 }
