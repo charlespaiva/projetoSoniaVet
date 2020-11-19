@@ -1,9 +1,9 @@
 :root {
-    --title-color: #0bf8b1;
-    --main-color: #0bb5d3;
+    --esmeralda-color: #0bf8b1;
+    --azul-color: #0bb5d3;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -14,7 +14,7 @@ html {
 /*BOX MODEL*/
 
 body {
-    background: rgb(248, 255, 252);
+    background: rgb(245, 245, 245);
     -webkit-font-smoothing: antialiased;
 }
 
@@ -24,7 +24,7 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: Noto Sans, sans-serif;
-    color: var(--title-color);
+    color: var(--esmeralda-color);
 }
 
 #page-home{
@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #page-home .content{
     width: 90%;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 30px auto 0 40px;
 
     display: flex;
@@ -43,13 +43,6 @@ h1, h2, h3, h4, h5, h6 {
 
     height: 100%;
 }
-
-#page-home header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 
 #page-home main{
     max-width: 560px;
@@ -68,43 +61,53 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #page-home main p{
-    font-size: 24px;
+    font-size: 26px;
     line-height: 38px;
     margin-top: 24px;
 }
 
+#page-home header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#page-home header a:hover{
+    background-color: #038aa1;
+}
+
+/*Botão, letra, tamanho*/
 #page-home header a{
     width: 50%;
     max-width: 160px;
-    height: 35px;
+    height: 30px;
     border-radius: 5px 16px;
 
-    display: flex;
+
     align-items: center;
-    margin-top: 25px;
+    margin-top: 20px;
 
     font-weight: bold;
+    font-size: 15px;
     color: white;
-    background-color: var(--main-color);
+    background-color: var(--azul-color);
+
+    display: flex;
+    
 
     cursor: pointer;
 
     transition: 400ms;
 }
 
-#page-home header a:hover {
-    background-color: #00a0bd;
-}
-
 #page-home header a span {
     width: 150px;
-    margin-left: 14px;
-    
-    border-top-left-radius: 5px 16px ;
-}
 
-#page-home header a span::after {
-    content:"";
+    border-top-left-radius: 5px 16px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .logoSoniaVet {
@@ -113,5 +116,32 @@ h1, h2, h3, h4, h5, h6 {
     width: auto;
     height: auto;
     margin-top: 25px;
+
+}
+
+@media (max-width: 900px) {
+    #page-home{
+        background-position-x: 70vw;
+    }
+    
+    #page-home .content {
+        align-items: center;
+        text-align: center;
+
+        margin: 5%;
+    }
+
+    #page-home header a {
+        position: absolute;
+        bottom: 15%;
+
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #page-home main {
+        align-items: center;
+
+    }
 
 }
