@@ -1,0 +1,27 @@
+#modal {
+    background-color: #001a1299;
+
+    height: 100vh;
+    width: 100vw;
+    
+    position: fixed;
+    top: 0;
+
+    transition: 400ms;
+}
+
+#modal .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+    color: white;
+}
+
+#model .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
