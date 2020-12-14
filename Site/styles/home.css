@@ -1,7 +1,7 @@
 #page-home{
     height: 60vh;   
     background-size: contain;
-    background: url(../assets/gachorro.png) no-repeat;
+    background: url(/assets/gachorro.png) no-repeat;
     background-position: 45vw 10vw;
     background-size: 650px;
 
